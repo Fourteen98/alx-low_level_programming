@@ -1,19 +1,41 @@
-include "main.h"
 #include <stdio.h>
+
 /**
- * main - check for multiples of 3 and 5
+ * main - sums 3-5_cous - Entry point
  *
- * Return: Always 0.
+ * Return:  (0)
  */
+
 int main(void)
 {
-	int x = 1024, y, sum = 0;
+	int i = 0;
+	int m3 = 3;
+	int m5 = 5;
+	int sum = 0;
+	int lim = 1024;
 
-	for (y = 0; y < x; y++)
+	while (i == 0)
 	{
-		if ((y % 3 == 0) || (y % 5 == 0))
+
+		if (m3 < lim)
 		{
-			sum = sum + y;
+			sum += m3;
+			m3 += 3;
+		}
+
+		if (m5 < lim && (m5 % 3) != 0)
+		{
+			sum += m5;
+			m5 += 5;
+		}
+		else if (m5 % 3 == 0)
+		{
+			m5 += 5;
+		}
+
+		if (m3 >= lim && m5 >= lim)
+		{
+			i = 1;
 		}
 	}
 	printf("%d\n", sum);
