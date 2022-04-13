@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 /**
  * add - adds two integrers and returns the result
  *
